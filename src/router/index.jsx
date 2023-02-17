@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../views/Home";
-import About from "../views/About";
+import { lazy } from "react";
+const Home = lazy(() => import("../views/Home"));
+const About = lazy(() => import("../views/About"));
+
 const router = createBrowserRouter([
   {
     path: "/",
